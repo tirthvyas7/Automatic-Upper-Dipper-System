@@ -44,9 +44,6 @@ void setup(){
 }
 
 void loop(){
-
-
-
   LDRReading1 = analogRead(LDR1);    // Reading LDR Input.
   LDRReading2= analogRead(LDR2);
   Serial.println("LDR1:");
@@ -59,34 +56,15 @@ analogWrite(LED_1, 50);
   else{
   digitalWrite(LED_1,HIGH);             // If LDR is below threshold make LED OFF.
   }
-//  int chk = DHT.read11(DHT11_PIN);
-//  Serial.print("Temperature = ");
-//  Serial.println(DHT.temperature);
-//  Serial.print("Humidity = ");
-//  Serial.println(DHT.humidity);
-//  if(DHT.humidity==0){
-//          digitalWrite(LED_1,1);
-//          digitalWrite(LED_2,1);
-//    }else{
-//            analogWrite(LED_1, 80);
-//            analogWrite(LED_2, 715); 
-//      }
-//    delay(600);      // delay to make output readable on serial monitor.
 
 isObstacle = digitalRead(isObstaclePin);
 
 if (isObstacle == LOW)
-
 {
- 
-    analogWrite(LED_1,5);
+     analogWrite(LED_1,5);
     delay(100);
     analogWrite(LED_1,100);
     delay(100);
-
-  
-
-
 }
 
 
